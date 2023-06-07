@@ -1,4 +1,4 @@
-女子一人旅👜のススメ
+# 女子一人旅👜のススメ
 
 ## サイト概要
 ### サイトテーマ
@@ -20,13 +20,15 @@
 
 
 ### 主な利用シーン
--  一人旅行をしたいけれどどのようにしていいかわからない時
--　みんながどのようなところに行っているか情報収集をしたいとき
--　旅行に対するお役立ち情報が知りたいとき
+- 一人旅行をしたいけれどどのようにしていいかわからない時
+- みんながどのようなところに行っているか情報収集をしたいとき
+- 旅行に対するお役立ち情報が知りたいとき
 
 
 ## 設計書
--　実装機能リストのURL https://docs.google.com/spreadsheets/d/1ys5QneicLdg79UyOdN779l8pUSSsAm8pUe22tsnkNdE/edit?usp=sharing
+- 実装機能リストのURL https://docs.google.com/spreadsheets/d/1ys5QneicLdg79UyOdN779l8pUSSsAm8pUe22tsnkNdE/edit?usp=sharing
+- 画面設計(管理者).drawio.png　https://drive.google.com/file/d/1tMP9F2XB-qGvX_LgFxkoQtP19DXDWOtL/view?usp=sharing
+- 画面設計(ユーザー).drawio.png　https://drive.google.com/file/d/19D1ZG_0TteM_ePDZwRvv2AGgje4Pkzic/view?usp=sharing
 
 ## 開発環境
 - OS：Linux(CentOS)
