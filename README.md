@@ -29,7 +29,9 @@
 - 実装機能リストのURL https://docs.google.com/spreadsheets/d/1ys5QneicLdg79UyOdN779l8pUSSsAm8pUe22tsnkNdE/edit?usp=sharing
 - 画面設計(管理者).drawio.png　https://drive.google.com/file/d/1tMP9F2XB-qGvX_LgFxkoQtP19DXDWOtL/view?usp=sharing
 - 画面設計(ユーザー).drawio.png　https://drive.google.com/file/d/19D1ZG_0TteM_ePDZwRvv2AGgje4Pkzic/view?usp=sharing
-- Trip_ER図 https://drive.google.com/file/d/1Lc37uq4QWEkbKrzOA14ZIeIZYPULIhgg/view?usp=sharing
+- ER図 https://drive.google.com/file/d/1Lc37uq4QWEkbKrzOA14ZIeIZYPULIhgg/view?usp=sharing
+- アプリケーション詳細設計書 https://docs.google.com/spreadsheets/d/13uvdTPPTo7xt6mkL4vnAnHqch--TPZKI0ioa5-rUCng/edit?usp=sharing
+- テーブル定義書 https://docs.google.com/spreadsheets/d/1yfVoEhONSLxYl5XG_vn9Ib0p6mIknrNOtJpRcFkrImc/edit?usp=sharing
 
 ## 開発環境
 - OS：Linux(CentOS)
