@@ -11,29 +11,54 @@
       <td><%= f.text_field :nickname, autofocus: true %></td>
     </tr>
 
-  　　<div class="field">
-    　　<%= f.label :email %><br />
-    　　<%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  　　　</div>
+     <tr>
+       <th>フリガナ</th>
+       <td class="sign-up-small-cell"></td>
+       <td><%= f.text_field :nickname_kana, autofocus: true %></td>
+     </tr>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+     <tr>
+      <th>メールアドレス</th>
+      <td class="sign-up-small-cell"></td>
+      <td><%= f.email_field :email, autofocus: true, autocomplete: "email"%></td>
+     </tr>
+
+     <tr>
+      <th>電話番号（ハイフンなし）</th>
+      <td class="sign-up-small-cell"></td>
+      <td><%= f.text_field :phone_number, autofocus: true %></td>
+     </tr>
+
+
+     <tr>
+      <th>パスワード（６文字以上）</th>
+      <td class="sign-up-small-cell"></td>
+      <td><%= f.password_field :password %></td>
+       <% if @minimum_password_length %>
+       <em>(<%= @minimum_password_length %> characters minimum)</em>
+       <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
 
-  <div class="field">
+  <tr>
+    <th>パスワード（確認用）</th>
+    <td class="sign-up-small-cell"></td>
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
+  </tr>
  </tbody>
 </table>
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+  <br>
+  <br>
+
+<div class="customer-sign-up-actions">
+<%= f.submit "新規登録", class:"btn btn-success col-xs-3 col-xs-offset-5" %>
+</div>
 <% end %>
 </div>
-<%= render "public/shared/links" %>
+
+<div class="container col-xs-6 col-xs-offset-2 sign-up-message">
+  <h3>既に登録済みの方</h3>
+  <div class="row">
+    <span class="col-xs-offset-"><%= link_to 'こちら', new_customer_session_path %>からログインしてください。</span>
+  </div>
+</div>
