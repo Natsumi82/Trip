@@ -1,0 +1,6 @@
+<%= form_with url: public_search_path, method: :get, local: true do |f| %>
+  <div class="d-flex justify-content-end mt-3 mr-5">
+    <%= f.text_field :content, placeholder: "\uf002 Search", class: "fa" %>
+    <%= f.submit "検索", class:"btn btn-outline-secondary ml-2"%>
+  </div>
+<% end %>

@@ -10,4 +10,9 @@ class Public::UsersController < ApplicationController
 
   def withdraw
   end
+
+   def user_params
+    params.require(:user).permit(
+      :nickname,:nickname_kana,:email,:phone_number)
+  end
 end
