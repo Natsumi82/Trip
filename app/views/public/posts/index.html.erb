@@ -1,11 +1,21 @@
-<% @posts.each do |post| %>
-<div>
-  <%= link_to posts_path(post.id) do %>
-  <%= image_tag post.get_image %>
-  <% end %>
-  <p>投稿ユーザー画像：<%= image_tag 'no_image.jpg' %></p>
-  <p>投稿名：<%= post.post_name %></p>
-  <p>説明：<%= post.caption %></p>
-  <p>ユーザーネーム：<%= post.user.nickname %></p>
+<% provide(:title, "投稿") %>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 px-sm-0 offset-sm-1">
+            <h2 class="my-5">投稿一覧</h2>
+        </div>
+        <div class="col-sm-2 px-sm-0 text-right mt-5">
+
+            <%= link_to new_post_path,class:"btn btn btn-outline-secondary" do %>
+            <i class="fas fa-plus"></i>
+
+            <% end %>
+        </div>
+    </div>
+    <div class="row">
+    　<div class="col-sm-10 offset-1">
+        <%= render 'index', posts: @posts%>
+          <%= paginate @posts %>
+        </div>
+    </div>
 </div>
-<% end %>

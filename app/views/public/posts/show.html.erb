@@ -1,11 +1,45 @@
-<div>
-  <%= image_tag @post.get_image %>
-  <p>ショップ名：<%= @post.post_name %></p>
-  <p>説明：<%= @post.caption %></p>
-  <p>投稿ユーザー画像：<%= image_tag 'no_image.jpg' %></p>
-  <p>ユーザーネーム：<%= @post.user.nickname %></p>
-  <p>投稿日：<%= @post.created_at.strftime('%Y/%m/%d') %></p>
+<% provide(:title, "商品詳細") %>
+<div class="container">
+  <h2 class="mt-5 text-center">商品詳細</h2>
+    <div class="row align-items-center m-5">
+      <div class="col-lg text-center mb-5">
+  <%= image_tag @post.get_image, :size => '300x250'%>
+</div>
+
+<div class="col-lg">
+ <table class="table">
+  <tr>
+   <th>投稿名</th>
+   <td><%= @post.name %></td>
+  </tr>
+
+  <tr>
+   <th>投稿本文</th>
+   <td><%= @item.caption %></td>
+  </tr>
+
+  <tr>
+   <th>プロフィール画像</th>
+   <td><%= @post.get.image %></td>
+  </tr>
+
+  <tr>
+   <th>ユーザー名</th>
+   <td><%= @post.user.nickname %></td>
+  </tr>
+
+　<tr>
+   <th>投稿日</th>
+   <td><%= @post.created_at.strftime('%Y/%m/%d') %></td>
+  </tr>
+  
+<div class="d-flex justify-content-around">
  <% if @post.user == current_user %>
-    <%= link_to "削除", posts_path(@post), method: :delete %>
+ 　
+ 　 <p><%= link_to '編集',edit_post_path(@post.id) , class: 'btn btn-success' %></p>
+   <p><%= link_to "削除", posts_path(@post), method: :delete %></p>
   <% end %>
+</div>
+</div>
+</div>
 </div>

@@ -1,2 +1,48 @@
-<h1>Public::Posts#edit</h1>
-<p>Find me in app/views/public/posts/edit.html.erb</p>
+<% provide(:title, "投稿編集") %>
+<div class="container">
+    <h2 class="text-center my-5">投稿編集</h2>
+     <div class="row">
+
+  <div class="col-8 offset-2 mb-5">
+  <%= form_with model: @post do |f| %>
+   <table>
+   <tr>
+    <div class="form-group">
+      <%= f.label :画像・写真, class:"form_label"%>
+      <%= image_tag @post, :image, :size => '300x250'%>
+    </div>
+   </tr>
+
+   <tr>
+    <div class="form-group">
+     <th><%= f.label :投稿名, class:"form_label" %></th>
+     <td><%= f.text_field :post_name, placeholder:"投稿名",class:"form-control mb-3" %></td>
+    </div>
+   </tr>
+
+   <tr>
+    <div class="form-group">
+     <th><%= f.label :投稿本文, class:"form_label" %></th>
+     <td><%= f.text_area :caption, size: "100x5", placeholder:"ここに本文を記述します" ,class:"form-control form-control-lg mb-3"%></td>
+    </div>
+   </tr>
+
+　 <tr>
+    <div class="form-group">
+     <th><%= f.label :URL, class:"form_label" %></th>
+     <td><%= f.text_area :URL, size: "100x3", placeholder:"URL",class:"form-control form-control-lg mb-3" %></td>
+    </div>
+   </tr>
+
+
+  <tr>
+   <div class="form-action d-flex justify-content-around">
+    <%= f.submit "変更を保存", class:"btn btn-success" %>
+    <%= link_to "投稿詳細へ戻る",posts_path, class:"btn btn-outline-secondary" %>
+   </div>
+  </tr>
+    <% end %>
+</table>
+</div>
+  </div>
+</div>
