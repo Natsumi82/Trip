@@ -15,7 +15,7 @@
     <div class="row">
     　<div class="col-sm-10 offset-1">
         <%= render 'index', posts: @posts%>
-          <p><%= link_to "#{post.post_comments.count} コメント", posts_path(post.id) %></p>
+
           <%= paginate @posts %>
         </div>
     </div>

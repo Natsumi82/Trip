@@ -36,7 +36,10 @@ Rails.application.routes.draw do
 
     resources :schedules,only: [:index,:new,:create,:show,:edit,:update,:destroy]
 
-    resources :users,only: [:show,:edit,:unsubscribe,:withdraw]
+    get 'users/show'
+    get 'users/edit'
+    get 'users/unsubscribe'
+    get 'users/withdraw'
 
     resource :favorites, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]

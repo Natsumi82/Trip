@@ -1,3 +1,37 @@
-<h1>Admin::Users#show</h1>
-<p>Find me in app/views/admin/users/show.html.erb</p>
-  <p><%= link_to "#{post.post_comments.count} コメント", posts_path(post.id) %></p>
+<div class="container">
+  <h2 class="my-5">Mypage</h2>
+  <div class="row">
+    <p>ユーザー情報</p>
+    <table class="table">
+      <tbody>
+
+        <tr>
+          <td>nickname</td>
+          <td><%= @user.nickname %></td>
+        </tr>
+
+        <tr>
+          <td>カナ</td>
+          <td><%= @user.nickname_kana %></td>
+        </tr>
+
+        <tr>
+          <td>電話番号</td>
+          <td><%= @user.phone_number%></td>
+        </tr>
+        <tr>
+          <td>メールアドレス</td>
+          <td><%= @user.email%></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="ml-5">
+      <p><%= link_to "編集する",users_edit_path, class:"btn btn-success"%></p>
+      <p>投稿履歴</p>
+      <p><%= link_to "一覧を見る", posts_path,class:"btn btn-primary"%></p>
+    </div>
+
+  </div>
+</div>
+

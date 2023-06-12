@@ -1,0 +1,11 @@
+<% if @model == "user" %>
+  <h3>会員情報検索結果</h3>
+  <div class="container">
+    <%= render 'public/users/index', users: @records %>
+  </div>
+<% elsif @model == "post"%>
+  <h3>商品検索結果</h3>
+  <div class="container">
+    <%= render 'public/posts/index', posts: @records%>
+  </div>
+<% end %>
