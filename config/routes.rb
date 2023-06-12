@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
 # 管理者用
 # URL /admin/sign_in ...
   devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
@@ -39,6 +38,8 @@ Rails.application.routes.draw do
 
     resources :users,only: [:show,:edit,:unsubscribe,:withdraw]
 
+    resource :favorites, only: [:create, :destroy]
+    resources :post_comments, only: [:create, :destroy]
     get 'search/search'
 
  end

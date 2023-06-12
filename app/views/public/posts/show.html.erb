@@ -32,10 +32,10 @@
    <th>投稿日</th>
    <td><%= @post.created_at.strftime('%Y/%m/%d') %></td>
   </tr>
-  
+
 <div class="d-flex justify-content-around">
  <% if @post.user == current_user %>
- 　
+
  　 <p><%= link_to '編集',edit_post_path(@post.id) , class: 'btn btn-success' %></p>
    <p><%= link_to "削除", posts_path(@post), method: :delete %></p>
   <% end %>
