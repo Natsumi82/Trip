@@ -1,6 +1,6 @@
-<% provide(:title, "商品詳細") %>
+<% provide(:title, "投稿詳細") %>
 <div class="container">
-  <h2 class="mt-5 text-center">商品詳細</h2>
+  <h2 class="mt-5 text-center">投稿詳細</h2>
     <div class="row align-items-center m-5">
       <div class="col-lg text-center mb-5">
   <%= image_tag @post.get_image, :size => '300x250'%>
@@ -15,7 +15,7 @@
 
   <tr>
    <th>投稿本文</th>
-   <td><%= @item.caption %></td>
+   <td><%= @post.caption %></td>
   </tr>
 
   <tr>
