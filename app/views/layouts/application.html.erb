@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>女子一人旅のススメ</title>
+     <%= favicon_link_tag 'suitcase.jpeg' %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,7 +15,7 @@
     <div id="wrapper">
     <%= render "layouts/header"%>
     <main>
-    <% if admin_signed_in?%>
+    <% if user_signed_in?%>
       <%= render "layouts/search"%>
     <% end %>
       <div class="container">

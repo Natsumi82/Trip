@@ -41,6 +41,7 @@
 - IDE：Cloud9
 
 ## 使用素材
-- 使用検討中です。
+- 画像・写真: GIRLY DROP https://girlydrop.com/
+-             ぱくたそ https://www.pakutaso.com/
 
 
