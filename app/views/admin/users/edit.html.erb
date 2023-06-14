@@ -1,2 +1,48 @@
-<h1>Admin::Users#edit</h1>
-<p>Find me in app/views/admin/users/edit.html.erb</p>
+<% provide(:title, "ユーザー情報編集") %>
+<div class="container">
+  <h2 class="text-center m-5"><%= nickname(@user)%>さんの会員情報編集</h2>
+  <div class="row d-flex justify-content-center">
+
+  <%= form_with model: @user, url: admin_user_path, local: true do |f| %>
+    <div class="col-xs-10 offset-1">
+      <div class="form-group col-xs-9">
+        <%= f.label :"会員ID", class: "col-sm-4" %>
+        <%= f.label :"#{@user.id}" %>
+      </div>
+      <div class="form-group col-xs-9">
+        <%= f.label :"ニックネーム", class: "col-sm-4 control-label" %>
+        <%= f.text_field :nickname, class: "col-sm-3 form-control-static" %>
+      </div>
+
+      <div class="form-group col-xs-9">
+        <%= f.label :"フリガナ", class: "col-sm-4 control-label" %>
+        <%= f.text_field :nickname_kana, class: "col-sm-3 form-control-static name" %>
+      </div>
+
+      <div class="form-group col-xs-9">
+        <%= f.label :"電話番号", class: "col-sm-4 control-label" %>
+        <%= f.text_field :phone_number, class: "col-sm-4" %>
+      </div>
+
+      <div class="form-group col-xs-9">
+        <%= f.label :"メールアドレス", class: "col-sm-4 control-label" %>
+        <%= f.text_field :email, class: "col-sm-6" %>
+      </div>
+
+      <div class="form-group col-xs-9">
+        <%= f.label :"会員ステータス", class: "col-sm-4 control-label" %>
+        　<%= f.radio_button :is_deleted, false %>
+        　<%= f.label :is_deleted, "有効"%>
+        　<%= f.radio_button :is_deleted, true %>
+        　<%= f.label :is_deleted, "退会" %>
+      </div>
+    </div>
+      <div class="form-group col-xs-9 d-flex justify-content-around">
+        <%= f.submit '変更を保存する' ,class: "btn btn-success" %>
+        <%= link_to '会員詳細画面へ戻る',admin_user_path, class:"btn btn-outline-secondary"%>
+      </div>
+
+  <% end %>
+
+  </div>
+</div>
