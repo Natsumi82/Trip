@@ -20,17 +20,35 @@ class Public::PostsController < ApplicationController
   end
 
   def edit
+   @post = Post.find(params[:id])
   end
 
   def destroy
-    post = Post.new(post_params)
+    post = Post.find(params[:id])
     post.destroy
-    redirect_to posts_path
+    redirect_to posts_path, alert: '記事を削除しました！'
   end
+
+  def update
+     @post = Post.find(params[:id])
+    if @post.update(post_params)
+     flash[:notice] = "Post was successfully updated."
+     redirect_to posts_path(@post)
+    else
+     render :edit
+    end
+  end
+
 
   private
 
   def post_params
-    params.require(:post).permit(:post_name, :caption)
+    params.require(:post).permit(:post_name,:caption)
   end
+
+ def correct_user
+   @post = Post.find(params[:id])
+   redirect_to(posts_path) unless @post.user == current_user
+ end
+
 end

@@ -10,6 +10,14 @@
     <div class="col-sm-10 px-sm-0 mx-auto mb-5">
   <%= form_with model: @post do |f| %>
    <table>
+
+    <tr>
+    <div class="form-group">
+    　<th><%= f.label :ユーザー名 %></th>
+      <th><%= text_field :nickname, placeholder:"ユーザー名" %></th>
+    </div>
+   </tr>
+
    <tr>
     <div class="form-group">
     　<th><%= f.label :画像・写真 %></th>

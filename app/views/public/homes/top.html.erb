@@ -54,4 +54,36 @@
    </thread>
   </table>
 
+<tr>
+      <% @posts.each do |post| %>
+    </tr>
+     <td>
+      <%= link_to users_edit_path(post.user) do %>
+      <% end %>
+     </td>
+
+     <td>
+      <%= link_to post_path(post.id) do %>
+      <%= post.post_name %>
+      <% end %>
+     </td>
+
+
+    <tr>
+
+
+    </tr>
+        <% end %>
+        </tbody>
+    </table>
+
+
+
+
+
+          <%= paginate @posts %>
+        </div>
+    </div>
+</div>
+
 </div>

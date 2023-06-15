@@ -1,0 +1,19 @@
+     <table class="table  mb-5">
+        <thread>
+            <tr>
+             <th>ユーザーID</th>
+             <th>ユーザー名</th>
+             <th>投稿名</th>
+            </tr>
+         </thread>
+        <tbody>
+         <% posts.each do |post| %>
+         <tr>
+          <td><%= post.id %></td>
+          <td><%= link_to user.id,admin_users_edit_path(user.id) %></td>
+          <td><%= link_to post.name,admin_post_path(post.id) %></td>
+          <td><%=  %></td>
+         </tr>
+        <% end %>
+        </tbody>
+    </table>
