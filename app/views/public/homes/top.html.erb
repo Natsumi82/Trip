@@ -22,68 +22,25 @@
     </div>
 
 
-   <div class="container">
-        <div class="row">
-            <div class="col-xs-12 mx-auto">
-                <div class="text-center">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 mx-auto">
+<div class="text-center">
 
 <br>
 <br>
-                    <p>
-                        <span><h2>Welcome to this Site!</h2></span><br>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+<p><span><h2>Welcome to this Site!</h2></span><br></p>
 
-
-
-
-<div class="col-md-8 offset-md-1">
-  <h4>Posts</h4>
-  <table class="table table-hover table-inverse">
-   <thread>
-    <tr>
-     <th></th>
-     <th></th>
-     <th>Title</th>
-     <th>Post</th>
-     <th colspan="3"></th>
-    </tr>
-   </thread>
-  </table>
-
-<tr>
-      <% @posts.each do |post| %>
-    </tr>
-     <td>
-      <%= link_to users_edit_path(post.user) do %>
-      <% end %>
-     </td>
-
-     <td>
-      <%= link_to post_path(post.id) do %>
-      <%= post.post_name %>
-      <% end %>
-     </td>
-
-
-    <tr>
-
-
-    </tr>
-        <% end %>
-        </tbody>
-    </table>
-
-
-
-
-
-          <%= paginate @posts %>
-        </div>
-    </div>
-</div>
+<li>サイトの使い方について➡<%= link_to 'About', about_path %></li>
+<li>投稿記事を見る➡<%= link_to '投稿一覧',posts_path%></li>
+<li>新規登録➡<%= link_to '新規登録',new_user_registration_path%></li>
+<li>ログイン➡<%= link_to 'ログイン',new_user_session_path%></li>
 
 </div>
+</div>
+</div>
+</div>
+
+
+
+
