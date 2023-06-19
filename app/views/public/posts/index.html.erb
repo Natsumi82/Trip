@@ -4,12 +4,7 @@
         <div class="col-sm-8 px-sm-0 offset-sm-1">
             <h2 class="my-5">投稿一覧</h2>
         </div>
-        <div class="col-sm-2 px-sm-0 text-right mt-5">
 
-            <%= link_to new_post_path,class:"btn btn btn-outline-secondary" do %>
-            <i class="fas fa-plus"></i>
-            <% end %>
-        </div>
     </div>
     <table class="table  mb-5">
      <thread>
@@ -25,10 +20,9 @@
       <% @posts.each do |post| %>
     </tr>
      <td>
-      <%= link_to users_edit_path(post.user) do %>
       <%= post.user.nickname %>
 
-      <% end %>
+
      </td>
 
      <td>

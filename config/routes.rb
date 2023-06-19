@@ -36,8 +36,8 @@ Rails.application.routes.draw do
 
     resources :schedules,only: [:index,:new,:create,:show,:edit,:update,:destroy]
 
-    get 'users/show'
-    get 'users/edit'
+    resources :users,only: [:show,:edit,:update,:destroy]
+
     get 'users/unsubscribe'
     get 'users/withdraw'
 

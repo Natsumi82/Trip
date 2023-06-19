@@ -32,12 +32,14 @@ class Public::PostsController < ApplicationController
   def update
      @post = Post.find(params[:id])
     if @post.update(post_params)
-     flash[:notice] = "Post was successfully updated."
+     flash[:notice] = "投稿は更新されました!!"
      redirect_to posts_path(@post)
     else
      render :edit
     end
   end
+
+
 
 
   private
