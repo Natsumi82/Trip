@@ -6,14 +6,12 @@ Rails.application.routes.draw do
   sessions: "admin/sessions"
 }
   namespace :admin do
-    get 'users/index'
-    get 'users/show'
-    get 'users/edit'
+    resources :users,only: [:index,:show,:edit,:update,:destroy]
   end
+
   namespace :admin do
-    get 'posts/index'
-    get 'posts/show'
-    get 'posts/edit'
+    resources :posts,only: [:index,:show,:edit,:update,:destroy]
+
   end
   namespace :admin do
     get 'homes/top'
